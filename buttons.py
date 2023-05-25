@@ -168,12 +168,12 @@ class Elements:
 
         heading,_,distance = geod.inv(point1[0],point1[1],point2[0],point2[1], return_back_azimuth=False)
         
-        print(round(heading,2))
-        print(round(distance,2))
+        print(f"Heading: {round(heading,2)}°")
+        print(f"Distance: {round(distance,2)}m")
         self.angle = heading
         if self.poi is not None:
             self.poi.set_angle(self.angle)
-            print(self.poi.angle)
+            print(f"Heading: {self.poi.angle}°")
             self.poi.marker.draw() # Det här är den senaste punkten, vilket inte nödvändigtvis är den jag vill ändra på. Tror att jag fixat det nu.
         self.reset_tool()
         # except:
