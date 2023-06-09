@@ -85,7 +85,7 @@ side_list.update()
 # side_list.pack(fill="none",side="right", expand=1, pady=2, padx=2, anchor="ne")
 
 
-headline = ctk.CTkLabel(scroll,text="Objects:",width=200).pack(fill="x", expand=1, pady=2, padx=2, anchor="n")
+headline = ctk.CTkLabel(scroll,text="Objects:",width=300).pack(fill="x", expand=1, pady=2, padx=2, anchor="n")
 
 def update_side_list():
     create_object_menu()
@@ -97,8 +97,6 @@ def create_object_menu():
             object_list.remove_from_list(i)
             scroll.update()
             
-            
-
         elif (i.frame is None):
             i.set_frame(scroll)
             print("making menu "+i.name)
